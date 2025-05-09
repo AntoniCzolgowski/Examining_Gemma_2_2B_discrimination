@@ -74,6 +74,30 @@ Projekt wykorzystuje podejście "czarnej skrzynki" (black-box testing) do analiz
 *   Wizualizacje (np. mapa cieplna - Rysunek 15 w pracy) pokazują, dla których kombinacji cech model ma największe trudności z trafnym przewidywaniem.
 
 
+## 📂 Struktura Repozytorium 
+
+.
+├── data/
+│   ├── Data_from_World_Values_Survey_Wave_7.xlsx # Przefiltrowane dane wejściowe z WVS.
+│   ├── spss_wvs_data_with_interactions.sav       # Plik danych SPSS z interakcjami.
+├── scripts/
+│   ├── python/
+│   │   ├── gemma_query_corruption.py
+│   │   ├── gemma_query_democracy.py
+│   │   ├── gemma_query_economy.py
+│   │   ├── gemma_query_satisfaction.py
+│   │   └── gemma_query_technology.py
+│   └── R/
+│       ├── 01_calculate_predicted_wvs_values.R
+│       └── 02_merge_and_create_difference_variable.R
+├── results/
+│   ├── first_stage_regressions_wvs.docx
+│   ├── second_stage_regressions_bias_analysis.docx
+│   └── gender_difference_tests.docx
+├── docs/
+│   ├── variable_definitions_and_profiles.md # Opis zmiennych użytych do tworzenia profili respondentów.
+├── README.md
+
 ## 🚀 Jak Uruchomić (How to Run/Reproduce - General Steps)
 
 1.  **Skrypty Python:**
